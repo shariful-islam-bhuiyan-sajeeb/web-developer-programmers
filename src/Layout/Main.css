@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.background-images{
+    background-image:url(/src/image/background\ image.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
