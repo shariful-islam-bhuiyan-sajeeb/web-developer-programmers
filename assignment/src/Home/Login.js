@@ -1,20 +1,11 @@
 import React from 'react';
 
-const Register = () => {
-    const handleSubmit = event =>{
-        event.preventDefault();
-        const form = event.target;
-        const name = form.name.value;
-        const email = form.email.value;
-        const password = form.password.value;
-        console.log(name,email,password);
-    }
-    
+const Login = () => {
     return (
-        <form onSubmit={handleSubmit} className="w-full max-w-xl xl:px-8 xl:w-5/12 justify-center  ">
+        <div className="w-full max-w-xl xl:px-8 xl:w-5/12 justify-center  ">
             <div className="bg-white   rounded shadow-2xl p-7 sm:p-10">
                 <h3 className="mb-4 text-xl font-semibold sm:text-center sm:mb-6 sm:text-2xl">
-                      Register
+                    Sign up your Email Address
                 </h3>
                 <form>
                     <div className="mb-1 sm:mb-2">
@@ -43,7 +34,7 @@ const Register = () => {
                             E-mail
                         </label>
                         <input
-                            placeholder="type your password"
+                            placeholder="john.doe@example.org"
                             required
                             type="text"
                             className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
@@ -73,7 +64,7 @@ const Register = () => {
                             type="submit"
                             className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-black transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-green-600 focus:shadow-outline focus:outline-none"
                         >
-                            Register
+                            Login
                         </button>
                     </div>
                     <p className="text-xs text-gray-600 sm:text-sm">
@@ -81,8 +72,9 @@ const Register = () => {
                     </p>
                 </form>
             </div>
-        </form>
+        </div>
     );
+
 };
 
-export default Register; <h3>register page.</h3>
+export default Login;<h2> login page.</h2>
