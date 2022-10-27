@@ -7,6 +7,7 @@ import Error from "../Categories/Error";
 import Course from "../Categories/Course";
 import FAQ from "../Categories/FAQ";
 import Blog from "../Categories/Blog";
+import Categories from "../Categories/Categories";
 
  export const  router = createBrowserRouter([
     {
@@ -14,8 +15,13 @@ import Blog from "../Categories/Blog";
         element:<Main></Main>,
         children:[
             {
-             path:'/home',
+             path:'/',
              element:<Home></Home>   
+            },
+            {
+                path:'/categories',
+                element:<Categories></Categories>,
+                
             },
             {
                path:'/login',
@@ -31,7 +37,8 @@ import Blog from "../Categories/Blog";
             },
             {
                 path:'/course',
-                element:<Course></Course>
+                element:<Course></Course>,
+                loader: () => fetch('https://assignment-10-server-two.vercel.app/courses')
             },
             {
                 path:'/FAQ',

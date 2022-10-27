@@ -1,18 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 
 const Categories = () => {
-    const [categories , setCategories]=useState([]);
-
-    useEffect(()=>{
-        fetch('http://localhost:5000/learn')
-        .then(res => res.json())
-        .then(data =>setCategories(data));
-    },[])
-    
+    const course = useLoaderData()
+    console.log(course);
 
     return (
-        <div className='text-white text-xl font-semibold'>
-            <h2>All Categories :{categories.length}</h2>
+        <div>
+            <h2>all course.{course.length}</h2>
         </div>
     );
 };

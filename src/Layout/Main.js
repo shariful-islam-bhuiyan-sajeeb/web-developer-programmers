@@ -1,6 +1,6 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import Categories from '../Categories/Categories';
+
 import Header from '../Categories/Header/Header';
 import './Main.css';
 
@@ -12,7 +12,7 @@ const Main = () => {
             <div className='flex'>
             
                 <div className='w-48 mr-7'>
-                   <Categories></Categories>
+                  
                 </div>
 
                 <div className='w-full'>
