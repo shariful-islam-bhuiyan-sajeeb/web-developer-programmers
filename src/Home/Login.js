@@ -1,13 +1,18 @@
 import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 import React, { useContext, useState } from "react";
 import { FaGithub, FaGoogle } from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Contexts/AuthProvider";
 
 const Login = () => {
 	const [error,setError]=useState('');
 	const { singInUser, providerLogin } = useContext(AuthContext);
 	const navigate = useNavigate();
+	const location = useLocation();
+
+	// const from = location.state?.from?.pathname || '/';
+
+
 	const loginUser = event => {
 		event.preventDefault();
 		const form = event.target;
@@ -20,6 +25,7 @@ const Login = () => {
 				console.log(user);
 				setError('');
 				form.reset();
+				// navigate(from,{replace: true});
 			})
 			.catch(error => {
 				console.error(error);
@@ -63,7 +69,7 @@ const Login = () => {
 							E-mail
 						</label>
 						<input
-							placeholder="john.doe@example.org"
+							placeholder="Type your Email Id"
 							required
 							type="text"
 							className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"

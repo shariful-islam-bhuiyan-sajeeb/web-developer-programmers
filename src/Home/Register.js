@@ -1,10 +1,11 @@
 import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Contexts/AuthProvider";
 
 const Register = () => {
+	const [error,setError]=useState('')
 	const { providerLogin, createUser, updateUserProfile } =
 		useContext(AuthContext);
 	const navigate = useNavigate();
@@ -21,10 +22,12 @@ const Register = () => {
 				console.log(user);
 				navigate("/");
 				updateUserProfile(name, photoUrl);
+				setError('');
 				form.reset()
 			})
 			.catch(error => {
 				console.error(error);
+				setError(error.message)
 			});
 	};
 	const googleProvider = new GoogleAuthProvider();
@@ -143,6 +146,7 @@ const Register = () => {
 								</button>
 							</p>
 						</div>
+						<h2 className="text-red-600">{error}</h2>
 					</div>
 				</form>
 			</div>
