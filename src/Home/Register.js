@@ -21,6 +21,7 @@ const Register = () => {
 				console.log(user);
 				navigate("/");
 				updateUserProfile(name, photoUrl);
+				form.reset()
 			})
 			.catch(error => {
 				console.error(error);
@@ -45,6 +46,7 @@ const Register = () => {
 				const user = result.user;
 				console.log(user);
 				navigate("/");
+				
 			})
 			.catch(error => {
 				console.error(error);
