@@ -27,9 +27,10 @@ const CourseDetails = () => {
 						<p>Lectures: {lecture} videos</p> <p>Durations: {Duration}</p>
 						<div className=" flex justify-between items-center pt-2">
 							<div>
-								<button className="border-b  text-gray-400 hover:text-white py-1 px-4 rounded">
-									Get Premium Courses
-								</button>
+								<Link to={`/cheackout/${id}`} >
+									<button className="border-b  text-gray-400 hover:text-white py-1 px-4 rounded">
+										Get Premium Courses
+									</button> </Link>
 							</div>
 							<div className="card-actions justify-end">
 								<div className="badge badge-outline">{rating}</div>

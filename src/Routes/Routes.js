@@ -10,6 +10,7 @@ import Blog from "../Categories/Blog";
 import Categories from "../Categories/Categories";
 import CourseDetails from "../Categories/CourseDetails";
 import PrivateRoutes from "./PrivateRoutes";
+import CheackOut from "../Home/CheackOut";
 
 export const router = createBrowserRouter([
 	{
@@ -60,6 +61,14 @@ export const router = createBrowserRouter([
 					),
 				element: <CourseDetails />,
 			},
+			{
+				path:'/cheackout/:id',
+				element: <PrivateRoutes> <CheackOut></CheackOut> </PrivateRoutes>,
+				loader: ({ params }) =>
+					fetch(
+						`https://assignment-10-server-two.vercel.app/courses/${params.id}`
+					),
+			}
 		],
 	},
 ]);
