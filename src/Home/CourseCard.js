@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const CourseCard = ({ course }) => {
 	console.log(course);
 
-	const { Duration, id, picture, rating, title, totalView, category } = course;
+	const { id, picture, rating, title, totalView, category } = course;
 	return (
 		<div className="card mx-3 sm:w-96 bg-base-100 shadow-white shadow-xl">
 			<figure>
