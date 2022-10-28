@@ -39,7 +39,7 @@ export const router = createBrowserRouter([
 			},
 			{
 				path: "/course",
-				element: <PrivateRoutes> <Course></Course></PrivateRoutes>,
+				element: <PrivateRoutes> <Course></Course> </PrivateRoutes>,
 				loader: () =>
 					fetch("https://assignment-10-server-two.vercel.app/courses"),
 			},

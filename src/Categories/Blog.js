@@ -4,7 +4,7 @@ const Blog = () => {
     return (
         
         <div className='w-1/2 ms-auto text-white'>
-            <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-100  mb-4 rounded-box">
+            <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-emerald-400  mb-4 rounded-box">
                 <div className="collapse-title text-xl font-medium">
                     what is cors?
                 </div>
@@ -13,7 +13,7 @@ const Blog = () => {
                 </div>
             </div>
 
-            <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-100  mb-4 rounded-box">
+            <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-emerald-400 mb-4 rounded-box">
                 <div className="collapse-title text-xl font-medium">
                     Why are you using firebase? What other options do you have to implement authentication?
                 </div>
@@ -21,7 +21,7 @@ const Blog = () => {
                     <p>Firebase Authentication provides backend services, easy-to-use SDKs, and ready-made UI libraries to authenticate users to your app.It supports authentication using passwords, phone numbers, popular federated identity providers like Google, Facebook and Twitter, and more..</p>
                 </div>
             </div>
-            <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-100  mb-4 rounded-box">
+            <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-emerald-400  mb-4 rounded-box">
                 <div className="collapse-title text-xl font-medium">
                     How does the private route work?
                 </div>
@@ -29,7 +29,7 @@ const Blog = () => {
                     <p>The react private route component renders child components ( children ) if the user is logged in. If not logged in the user is redirected to the /login page with the return url passed in the location state property.</p>
                 </div>
             </div>
-            <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-100  mb-4 rounded-box">
+            <div tabIndex={0} className="collapse collapse-arrow border border-black bg-emerald-400  mb-4 rounded-box">
                 <div className="collapse-title text-xl font-medium">
                     What is Node? How does Node work?
                 </div>
